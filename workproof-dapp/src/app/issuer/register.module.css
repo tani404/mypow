@@ -1,0 +1,67 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #e8e8e8;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  background: #e8e8e8;
+  color: #0a0a0a;
+  border-color: #e8e8e8;
+}
+
+.btn:disabled {
+  border-color: #1e1e1e;
+  color: #333;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #333;
+  border-top-color: #888;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.successMsg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #22c55e;
+  letter-spacing: 0.05em;
+}
+
+.successDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}

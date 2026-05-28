@@ -1,0 +1,49 @@
+.footer {
+  border-top: 1px solid #161616;
+  background: #0a0a0a;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 11px;
+  font-weight: 500;
+  color: #2a2a2a;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.copy {
+  font-size: 11px;
+  color: #2a2a2a;
+  letter-spacing: 0.05em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.link {
+  font-size: 11px;
+  color: #2a2a2a;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: #666;
+}

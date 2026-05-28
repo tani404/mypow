@@ -1,0 +1,133 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #0a0a0a;
+  border-bottom: 1px solid #161616;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* logo */
+.logo {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e8e8e8;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo:hover {
+  color: #fff;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  height: 56px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #888;
+}
+
+.navLinkActive {
+  color: #888;
+  border-bottom-color: #333;
+}
+
+.verifiedBadge {
+  font-size: 9px;
+  color: #22c55e;
+  padding: 1px 5px;
+  border: 1px solid #1a3d2a;
+  border-radius: 4px;
+  background: #0d1f16;
+}
+
+/* right side */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* search */
+.searchWrap {
+  display: flex;
+  align-items: center;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+  width: 160px;
+}
+
+.searchWrap:focus-within {
+  border-color: #333;
+  width: 220px;
+  transition: border-color 0.2s, width 0.2s ease;
+}
+
+.searchIcon {
+  padding: 0 8px 0 10px;
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e8e8e8;
+  font-size: 0.75rem;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+  padding: 8px 8px 8px 0;
+  caret-color: #e8e8e8;
+  min-width: 0;
+}
+
+.searchInput::placeholder {
+  color: #2a2a2a;
+}
+
+/* rainbowkit connect button wrapper */
+.connectWrap button {
+  font-family: 'DM Mono', 'Fira Mono', monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.05em !important;
+}

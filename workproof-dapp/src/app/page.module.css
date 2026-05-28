@@ -1,0 +1,376 @@
+.page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #e8e8e8;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 7rem 2rem 4rem;
+  width: 100%;
+}
+
+.heroEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.heroTitle {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #f0f0f0;
+  margin: 0 0 1.5rem;
+}
+
+.heroSub {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0 0 3rem;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.searchRow:focus-within {
+  border-color: #444;
+}
+
+.searchIcon {
+  padding: 0 14px;
+  font-size: 18px;
+  color: #444;
+  user-select: none;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e8e8e8;
+  font-size: 0.875rem;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+  padding: 14px 0;
+  caret-color: #e8e8e8;
+}
+
+.searchInput::placeholder {
+  color: #333;
+}
+
+.searchBtn {
+  background: #1a1a1a;
+  border: none;
+  border-left: 1px solid #222;
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+  transition: background 0.15s, color 0.15s;
+}
+
+.searchBtn:hover {
+  background: #222;
+  color: #e8e8e8;
+}
+
+.statsBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #161616;
+  border-bottom: 1px solid #161616;
+  background: #0d0d0d;
+  padding: 1.25rem 2rem;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0 3rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #e8e8e8;
+}
+
+.statLabel {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.statDivider {
+  width: 1px;
+  height: 36px;
+  background: #1e1e1e;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: #161616;
+  border-top: 1px solid #161616;
+  flex: 1;
+}
+
+.card {
+  background: #0a0a0a;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardLabel {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.cardEmpty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cardEmptyText {
+  font-size: 0.875rem;
+  color: #333;
+  margin: 0;
+}
+
+.cardEmptySub {
+  font-size: 0.75rem;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.cardBody {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.addressRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.connectedDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+.addressMono {
+  font-size: 1rem;
+  color: #e8e8e8;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #141414;
+}
+
+.statusLabel {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.statusValue {
+  font-size: 0.875rem;
+  color: #e8e8e8;
+}
+
+.yes { font-size: 0.875rem; color: #22c55e; }
+.no  { font-size: 0.875rem; color: #ef4444; }
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.cardBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  color: #666;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.cardBtn:hover {
+  border-color: #444;
+  color: #e8e8e8;
+  background: #111;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.featureTick { color: #22c55e; font-size: 0.75rem; }
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.stepNum {
+  font-size: 11px;
+  color: #2a2a2a;
+  letter-spacing: 0.05em;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.stepTitle {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+.stepSub { font-size: 0.72rem; color: #333; }
+
+.liveAlert {
+  position: fixed;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 0.78rem;
+  color: #888;
+  white-space: nowrap;
+  z-index: 100;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: pulse 1.5s infinite;
+}
+
+.liveText { color: #666; }
+.liveMono { color: #888; font-family: 'DM Mono', 'Fira Mono', monospace; }
+
+.liveLink {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+.liveLink:hover { text-decoration: underline; }
+
+.liveClose {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.liveClose:hover { color: #888; }
